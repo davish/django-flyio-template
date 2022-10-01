@@ -17,6 +17,7 @@ $ poetry run django-admin startproject \
 
 # Launch a new Fly app.
 $ flyctl launch --copy-config --no-deploy
+# Update hostname in Django settings.
 $ ./set_hostname.sh
 # If you haven't already, configure a Postgres database in your Fly.io account.
 $ flyctl postgres create
