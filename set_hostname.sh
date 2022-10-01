@@ -13,3 +13,6 @@ fi
 hostname=$(echo $hostline | grep Hostname | cut -d '=' -f 2 | xargs)
 
 sed -i '' -e "s/<FLY_HOSTNAME>/$hostname/g" */settings.py
+
+echo "$0: Hostname set to $hostname. You can now delete this script:"
+echo "> rm $0"
