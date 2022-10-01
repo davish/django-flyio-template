@@ -28,8 +28,9 @@ SECRET_KEY = "django-insecure-09wuzpqsu(*7-c=gi&v@c*^63tvskfvgkzq)zus7iabu58hasf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["<FLY_HOSTNAME>"]
-CSRF_TRUSTED_ORIGINS = ["https://<FLY_HOSTNAME>"]
+FLY_HOSTNAME = f'{os.getenv("FLY_APP_NAME")}.fly.dev'
+ALLOWED_HOSTS = [FLY_HOSTNAME]
+CSRF_TRUSTED_ORIGINS = [f"https://{FLY_HOSTNAME}"]
 
 
 # Application definition
